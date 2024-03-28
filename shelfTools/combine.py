@@ -29,7 +29,9 @@ def run():
     merge = geoNode.createNode('merge')
     for index, objmerge in enumerate(objmergeList):
         # connect first objmerge to merge
-        merge.setInput(index,objmerge)
+        pack = geoNode.createNode('pack')
+        pack.setInput(0,objmerge)
+        merge.setInput(index,pack)
     merge.setSelected(True)
     merge.setDisplayFlag(True)
     merge.setRenderFlag(True)
