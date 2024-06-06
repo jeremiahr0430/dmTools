@@ -18,4 +18,6 @@ def run():
     objMerge.parm("objpath1").set(objMergePath)
     objMerge.parm("xformtype").set(1)
     setpos(nullNode,objMerge)
+    nodeSelect.setCurrent(False)
     objMerge.setCurrent(True) 
+
